@@ -25,7 +25,7 @@
   FeiShu.getStrategy = function (strategies, callback) {
     meta.settings.get('sso-feishu', function (err, settings) {
       FeiShu.settings = settings
-      
+  
       if (!err && settings.id && settings.secret) {
         passport.use(new FeishuStrategy({
             clientID: settings.id,
@@ -42,7 +42,7 @@
           },
           function (token, tokenSecret, profile, done) {
             var email = profile.email
-            var pictureUrl = profile.avatar.big || profile.avatar.icon
+            var pictureUrl = settings.useBigAvatar  === 'on' ? profile.avatar.big : profile.avatar.icon
             var displayName = profile.name
             var userName = profile.name
             FeiShu.login(profile.id, displayName, userName, email, pictureUrl, function (err, user) {

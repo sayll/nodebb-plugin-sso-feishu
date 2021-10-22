@@ -18,6 +18,12 @@
 				</p>
 			</div>
 			<div class="checkbox">
+				<label for="useBigAvatar" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+					<input type="checkbox" class="mdl-switch__input" id="useBigAvatar" name="useBigAvatar" />
+					<span class="mdl-switch__label">use user big avatar</span>
+				</label>
+			</div>
+			<div class="checkbox">
 				<label for="disableRegistration" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
 					<input type="checkbox" class="mdl-switch__input" id="disableRegistration" name="disableRegistration" />
 					<span class="mdl-switch__label">Disable user registration via SSO</span>
