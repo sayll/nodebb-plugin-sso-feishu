@@ -12,7 +12,7 @@
 			</div>
 			<div class="form-group alert alert-warning">
 				<label for="callback">Your NodeBB&apos;s "Authorization callback URL"</label>
-				<input type="text" id="callback" title="Authorization callback URL" class="form-control" value="{callbackURL}" readonly />
+				<input type="text" id="callback" title="Authorization callback URL" class="form-control" value="{callbackURL}" />
 				<p class="help-block">
 					Ensure that this value is set in your GitHub application&apos;s settings
 				</p>

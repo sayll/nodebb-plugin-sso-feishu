@@ -18,6 +18,14 @@
       'route': '/plugins/sso-feishu'
     }
   })
+  function stripscript(s) {
+    var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]")
+    var rs = "";
+    for (var i = 0; i < s.length; i++) {
+      rs = rs + s.substr(i, 1).replace(pattern, '');
+    }
+    return rs;
+  }
   
   var FeiShu = {}
   const domain = nconf.get('url')
@@ -44,7 +52,7 @@
             var email = profile.email
             var pictureUrl = settings.useBigAvatar  === 'on' ? profile.avatar.big : profile.avatar.icon
             var displayName = profile.name
-            var userName = profile.name
+            var userName = stripscript(profile.name)
             FeiShu.login(profile.id, displayName, userName, email, pictureUrl, function (err, user) {
               if (err) return done(err)
               done(null, user)
