@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-sso-feishu",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "NodeBB FeiShu SSO",
   "main": "library.js",
   "repository": {

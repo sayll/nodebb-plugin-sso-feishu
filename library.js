@@ -65,6 +65,7 @@
           url: '/auth/feishu',
           callbackURL: '/auth/feishu/callback',
           icon: constants.admin.icon,
+          logo: settings.ssoLogo,
           scope: 'user:email'
         })
       }

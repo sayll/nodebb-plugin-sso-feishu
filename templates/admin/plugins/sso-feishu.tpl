@@ -10,9 +10,13 @@
 				<label for="secret">Client Secret</label>
 				<input type="text" name="secret" title="Client Secret" class="form-control" placeholder="Client Secret" />
 			</div>
+			<div class="form-group">
+                <label for="ssoLogo">SSO Logo</label>
+                <input type="text" name="ssoLogo" title="ssoLogo" class="form-control" placeholder="sso logo" />
+            </div>
 			<div class="form-group alert alert-warning">
 				<label for="callback">Your NodeBB&apos;s "Authorization callback URL"</label>
-				<input type="text" id="callback" title="Authorization callback URL" class="form-control" value="{callbackURL}" />
+				<input type="text" id="callback" title="Authorization callback URL" class="form-control" value="{callbackURL}" readonly />
 				<p class="help-block">
 					Ensure that this value is set in your GitHub application&apos;s settings
 				</p>
